@@ -13,7 +13,7 @@ export default {
 
         commit('SET_TIMES', times)
         commit('SET_DATE', r.date_for)
-        
+
         resolve(response)
       }).catch((error) => {
         reject(error)
