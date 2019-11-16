@@ -1,6 +1,6 @@
 {
   "name": "r",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Ramadan",
   "author": "Muhar Dwi Purwanto",
   "private": true,
@@ -11,7 +11,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "bourbon": "^6.0.0",
+    "compass-mixins": "^0.12.10",
+    "node-sass": "4.12.0",
+    "nuxt": "^2.0.0",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "7.1.0",
+    "vue-moment": "^4.0.0"
   },
   "devDependencies": {}
 }
