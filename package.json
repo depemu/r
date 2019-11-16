@@ -1,0 +1,17 @@
+{
+  "name": "r",
+  "version": "1.0.0",
+  "description": "Ramadan",
+  "author": "Muhar Dwi Purwanto",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
