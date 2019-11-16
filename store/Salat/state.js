@@ -1,3 +1,4 @@
-export default () => {
-  times: []
-}
+export default () => ({
+  times: [],
+  date: ''
+})
