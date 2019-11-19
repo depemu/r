@@ -1,2 +1,20 @@
 section
-  span Home
+  template(v-if="loader")
+    .loader Loading
+  template(v-else)
+    div {{ now}}
+    hr
+    div Imsak {{ imsak }}
+    div Subuh {{ subuh }}
+    div Magrib {{ magrib }}
+    hr
+    template(v-if="canEat")
+      template(v-if="isMagribPast")
+        span Eat Berbuka
+      template(v-else-if="isImsak")
+        span Eat Cepat2
+      template(v-else)
+        span Eat Sahur
+    template(v-else)
+      span Can not Eat
+    
