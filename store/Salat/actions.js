@@ -7,7 +7,7 @@ export default {
           subuh: r.fajr,
           zuhur: r.dhuhr,
           asar: r.asr,
-          maghrib: r.maghrib,
+          magrib: r.maghrib,
           isya: r.isha
         }
 
