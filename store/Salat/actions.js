@@ -3,17 +3,18 @@ export default {
     return new Promise ((resolve, reject) => {
       this.$axios.$get('https://api.lab.muhar.us/salat/').then((response) => {
         if (!response.error) {
-          const r = response[0]
+          const items = response.items[0]
+          const r = items.times
           const times = {
-            subuh: r.fajr,
-            zuhur: r.dhuhr,
-            asar: r.asr,
-            magrib: r.maghrib,
-            isya: r.isha
+            subuh: r.Fajr,
+            zuhur: r.Dhuhr,
+            asar: r.Asr,
+            magrib: r.Maghrib,
+            isya: r.Isha
           }
 
           commit('SET_TIMES', times)
-          commit('SET_DATE', r.date_for)
+          commit('SET_DATE', items.date.gregorian)
 
           resolve(response)
         }
