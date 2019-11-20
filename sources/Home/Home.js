@@ -1,12 +1,16 @@
 import { mapGetters, mapActions } from 'vuex'
 import moment from 'moment'
 
+moment.locale('id')
+
 export default {
   data() {
     return {
       loader: true,
       now: '',
-      dateApiFormat: 'YYYY-MM-DD h:mm a',
+      dateApiFormat: 'YYYY-MM-DD',
+      timeApiFormat: 'HH:mm',
+      timeFormat: 'HH:mm:ss',
       imsakDuration: 10
     }
   },
@@ -15,31 +19,38 @@ export default {
       'times',
       'date'
     ]),
+    dateTimeApiFormat() {
+      return `${this.dateApiFormat} ${this.timeApiFormat}`
+    },
+    time() {
+      return this.now.format(this.timeFormat)
+    },
     magrib() {
-      return '4:30 am'
-      return this.times.magrib.replace(' ', '')
-    },
-    imsakMoment() {
-      return moment(this.subuh, 'h:mm a').add(-1 * this.imsakDuration, 'minutes')
-    },
-    imsak() {
-      return moment(this.imsakMoment).format('h:mm a')
+      return this.times.magrib
     },
     subuh() {
-      return '4:21 am'
       return this.times.subuh
     },
+    imsak() {
+      return this.imsakMoment.format(this.timeApiFormat)
+    },
     magribMoment() {
-      return moment(`${this.date} ${this.magrib}`, this.dateApiFormat)
+      return this.createMoment(this.magrib)
     },
     subuhMoment() {
-      return moment(`${this.date} ${this.subuh}`, this.dateApiFormat)
+      return this.createMoment(this.subuh)
+    },
+    imsakMoment() {
+      return this.createMoment(this.subuh).add(-1 * this.imsakDuration, 'minutes')
     },
     magribDiff() {
-      return this.magribMoment.diff(this.now)
+      return this.diffFromNow(this.magribMoment)
     },
     subuhDiff() {
-      return this.subuhMoment.diff(this.now)
+      return this.diffFromNow(this.subuhMoment)
+    },
+    imsakDiff() {
+      return this.diffFromNow(this.imsakMoment)
     },
     isMagribPast() {
       return this.magribDiff < 0
@@ -48,8 +59,7 @@ export default {
       return this.subuhDiff < 0
     },
     isImsak() {
-      // @todo
-      return true
+      return this.imsakDiff < 0 && !this.isSubuhPast
     },
     canEat() {
       if (this.isMagribPast) {
@@ -71,7 +81,13 @@ export default {
   methods: {
     ...mapActions([
       'getPrayTimes'
-    ])
+    ]),
+    createMoment (time) {
+      return moment(`${this.date} ${time}`, this.dateTimeApiFormat)
+    },
+    diffFromNow (moment) {
+      return moment.diff(this.now)
+    }
   },
   mounted() {
     this.now = moment()
