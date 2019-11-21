@@ -38,20 +38,46 @@ a
   padding: $padding * 5 0 $padding * 3
 
 .content
-  padding: $padding * 1.5 0
+  padding: $padding * 1.5 0 0
 
 .footer
+  display: none
   border-top: 1px solid lighten($bg-color, 20%)
   padding-top: $padding
-  margin-top: $padding * 2
+  margin-top: $padding * 3.5
   font-size: 80%
-  color: darken($color, 20%)
+  color: darken($color, 40%)
   &__text
   &__notes
     font-size: 90%
-    color: darken($color, 10%)
+    color: darken($color, 35%)
   span
     color: red
+
+.card
+  display: inline-block
+  background: $color
+  color: $bg-color
+  padding: $padding /2 $padding
+  margin:
+    right: $padding / 2
+    bottom: $padding / 2
+  +border-radius($radius)
+  +box-shadow(0 0 10px #666)
+
+  &:last-child
+    margin-right: 0
+  &s
+    margin-top: $padding * 1.5
+    margin-bottom: -$padding / 2
+
+  &__title
+    text-transform: uppercase
+    font-weight: $font-weight-bold
+  &--red
+    background: darken(red, 5%)
+    color: $color
+    +box-shadow(0 0 10px red)
 
 .image
   &s
