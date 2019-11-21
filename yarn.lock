@@ -4344,6 +4344,10 @@ mustart-gradients@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/mustart-gradients/-/mustart-gradients-0.0.6.tgz#dc5e4de1e97a947726084c8e9ed4e728ae537498"
 
+mustart-media-queries@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/mustart-media-queries/-/mustart-media-queries-0.0.7.tgz#dcde4f0ab30e164b56dc46e25befc65720866576"
+
 nan@^2.12.1, nan@^2.13.2:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
