@@ -15,7 +15,6 @@
     "bourbon": "^6.0.0",
     "compass-mixins": "^0.12.10",
     "moment": "^2.24.0",
-    "mustart-media-queries": "^0.0.7",
     "node-sass": "4.12.0",
     "nuxt": "^2.0.0",
     "pug": "^2.0.4",
