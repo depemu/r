@@ -1,2 +1,27 @@
-section
-  span Home
+.container
+  .header.loader(v-if="loader")
+    span Loading...
+    span Please wait a minute
+  .content(v-else)
+    template(v-if="canEat")
+      .images
+        div(:class="eatStyle")
+          img(src="/images/tuna-salad.png")
+      .cards
+        template(v-if="isMagribPast")
+          .space
+        template(v-else)
+          .card(:class="isImsak ? 'card--red' : ''")
+            .card__title {{ toSubuh }}
+    template(v-else)
+      .images
+        .image--food
+          img(src="/images/tuna-salad.png")
+        .image--stop.image--zoom-fast
+          img(src="/images/dont.png")
+      .cards
+        .card
+          .card__title {{ toMagrib }}
+  .footer
+    .footer__text Made with #[span &hearts;] by #[a(href="https://muhar.us", target="_blank") Muhar]
+    .footer__notes 2019
