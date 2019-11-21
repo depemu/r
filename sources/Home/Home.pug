@@ -1,20 +1,26 @@
-section
-  template(v-if="loader")
-    .loader Loading
-  template(v-else)
-    div {{ now}}
-    hr
-    div Imsak {{ imsak }}
-    div Subuh {{ subuh }}
-    div Magrib {{ magrib }}
-    hr
+.container
+  .header.loader(v-if="loader")
+    span Loading...
+    span Please wait a minute
+  .content(v-else)
     template(v-if="canEat")
-      template(v-if="isMagribPast")
-        span Eat Berbuka
-      template(v-else-if="isImsak")
-        span Eat Cepat2
-      template(v-else)
-        span Eat Sahur
+      .images
+        div(:class="eatStyle")
+          img(src="/images/tuna-salad.png")
+      .cards
+        template(v-if="isMagribPast")
+        template(v-else)
+          .card(:class="isImsak ? 'card--red' : ''")
+            .card__title {{ toSubuh }}
     template(v-else)
-      span Can not Eat
-    
+      .images
+        .image--food
+          img(src="/images/tuna-salad.png")
+        .image--stop.image--zoom-fast
+          img(src="/images/dont.png")
+      .cards
+        .card
+          .card__title {{ toMagrib }}
+  .footer
+    .footer__text Made with #[span &hearts;] by #[a(href="https://muhar.us", target="_blank") Muhar]
+    .footer__notes 2019
