@@ -34,6 +34,15 @@ export default {
     imsak() {
       return this.imsakMoment.format(this.timeApiFormat)
     },
+    toMagrib() {
+      return this.toMoment(this.magribDiff)
+    },
+    toSubuh() {
+      return this.toMoment(this.subuhDiff)
+    },
+    toImsak() {
+      return this.toMoment(this.imsakDiff)
+    },
     magribMoment() {
       return this.createMoment(this.magrib)
     },
@@ -71,6 +80,13 @@ export default {
       }
 
       return true
+    },
+    eatStyle() {
+      if (this.isImsak) {
+        return 'image--zoom-fast'
+      }
+
+      return 'image--rotate'
     }
   },
   filters: {
@@ -87,6 +103,9 @@ export default {
     },
     diffFromNow (moment) {
       return moment.diff(this.now)
+    },
+    toMoment (time) {
+      return moment.utc(time).format(this.timeFormat)
     }
   },
   mounted() {
