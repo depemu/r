@@ -9,6 +9,7 @@
           img(src="/images/tuna-salad.png")
       .cards
         template(v-if="isMagribPast")
+          .space
         template(v-else)
           .card(:class="isImsak ? 'card--red' : ''")
             .card__title {{ toSubuh }}

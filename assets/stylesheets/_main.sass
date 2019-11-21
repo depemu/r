@@ -1,9 +1,16 @@
+html
+  height: 100%
+
 body
   background-color: $bg-color
   color: $color
   padding: $padding * 2
   line-height: 130%
   text-align: center
+  min-height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
   font:
     family: $font-family
     size: $font-size
@@ -20,6 +27,9 @@ a
 .transition
   +transition(all .3s ease-in-out)
 
+.space
+  height: 10px
+
 .container
   max-width: $container-width
   margin: 0 auto
@@ -35,10 +45,9 @@ a
     &:nth-child(2)
 
 .loader
-  padding: $padding * 5 0 $padding * 3
+  padding: $padding 0 $padding * 3
 
 .content
-  padding: $padding * 1.5 0 0
 
 .footer
   max-width: 200px
@@ -100,7 +109,7 @@ a
     top: 0
     left: 0
   &--space
-    margin-top: $padding * 2
+
 
 
   &--zoom
