@@ -4340,10 +4340,6 @@ mustache@^2.3.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/mustache/-/mustache-2.3.2.tgz#a6d4d9c3f91d13359ab889a812954f9230a3d0c5"
 
-mustart-gradients@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/mustart-gradients/-/mustart-gradients-0.0.6.tgz#dc5e4de1e97a947726084c8e9ed4e728ae537498"
-
 mustart-media-queries@^0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mustart-media-queries/-/mustart-media-queries-0.0.7.tgz#dcde4f0ab30e164b56dc46e25befc65720866576"
