@@ -86,6 +86,10 @@ export default {
         return 'image--zoom-fast'
       }
 
+      if (this.isMagribPast) {
+        return 'image--rotate image--space'
+      }
+
       return 'image--rotate'
     }
   },
