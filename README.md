@@ -1,4 +1,5 @@
-r for Ramadan. Simple helper for your fasting experience. Help you to eat or not to eat. Build using Nuxt.js.
+r for Ramadan. Simple helper for your fasting experience. 
+Help you to eat or not to eat. Build using Nuxt.js.
 
 ## Getting Started
 
