@@ -16,6 +16,8 @@
     "bourbon": "^6.0.0",
     "compass-mixins": "^0.12.10",
     "dot-prop": "^4.2.1",
+    "kind-of": "^6.0.3",
+    "minimist": "^1.2.3",
     "moment": "^2.24.0",
     "node-sass": "4.12.0",
     "nuxt": "^2.0.0",
