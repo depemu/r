@@ -15,7 +15,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters([
+    ...mapGetters('Salat', [
       'times',
       'date'
     ]),
@@ -99,9 +99,9 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      'getPrayTimes'
-    ]),
+    ...mapActions({
+      getPrayTimes: 'Salat/getPrayTimes'
+    }),
     createMoment (time) {
       return moment(`${this.date} ${time}`, this.dateTimeApiFormat)
     },
