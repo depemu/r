@@ -1,7 +1,7 @@
 export default {
   getPrayTimes ({ commit }) {
     return new Promise ((resolve, reject) => {
-      this.$axios.$get('//depemu-mapi.herokuapp.com/salat/').then((response) => {
+      this.$axios.$get('//depemumapi.herokuapp.com/salat/').then((response) => {
         if (!response.error) {
           const items = response.items[0]
           const r = items.times
