@@ -12,6 +12,13 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      {
+        'data-goatcounter': 'https://depemur.goatcounter.com/count',
+        async: 'async',
+        src: '//gc.zgo.at/count.js'
+      }
     ]
   },
   /*
