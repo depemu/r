@@ -15,7 +15,7 @@ export default {
     ],
     script: [
       {
-        'data-goatcounter': 'https://depemur.goatcounter.com/count',
+        'data-goatcounter': 'https://ramadan.goatcounter.com/count',
         async: 'async',
         src: '//gc.zgo.at/count.js'
       }
