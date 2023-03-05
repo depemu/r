@@ -42,12 +42,12 @@ a
       font:
         size: 150%
         weight: $font-weight-bold
-    &:nth-child(2)
+    // &:nth-child(2)
 
 .loader
   padding: $padding 0 $padding * 3
 
-.content
+// .content
 
 .footer
   max-width: 300px
@@ -57,7 +57,7 @@ a
   margin-top: $padding * 3.5
   font-size: 80%
   color: darken($color, 40%)
-  &__text
+  // &__text
   &__notes
     font-size: 90%
     color: darken($color, 35%)
@@ -66,10 +66,10 @@ a
   display: inline-block
   background: $color
   color: $bg-color
-  padding: $padding /2 $padding
+  padding: math.div($padding, 2) $padding
   margin:
-    right: $padding / 2
-    bottom: $padding / 2
+    right: math.div($padding, 2)
+    bottom: math.div($padding, 2)
   +border-radius($radius)
   +box-shadow(0 0 10px #666)
 
@@ -77,7 +77,7 @@ a
     margin-right: 0
   &s
     margin-top: $padding * 1.5
-    margin-bottom: -$padding / 2
+    margin-bottom: math.div(-$padding, 2)
 
   &__title
     text-transform: uppercase
@@ -106,7 +106,7 @@ a
     position: absolute
     top: 0
     left: 0
-  &--space
+  // &--space
 
 
 
