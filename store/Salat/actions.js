@@ -3,7 +3,7 @@ export default {
     return new Promise ((resolve, reject) => {
       this.$axios.$get('//api.muh.my.id/v1/salat/').then((response) => {
         if (!response.error) {
-          const items = response.items[0]
+          const items = response.items
           const r = items.times
           const times = {
             subuh: r.Fajr,
@@ -14,7 +14,7 @@ export default {
           }
 
           commit('SET_TIMES', times)
-          commit('SET_DATE', items.date.gregorian)
+          commit('SET_DATE', items.date)
 
           resolve(response)
         }
