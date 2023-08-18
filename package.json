@@ -5,9 +5,9 @@
   "author": "Muhar Dwi Purwanto",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate"
   },
   "dependencies": {
@@ -15,10 +15,14 @@
     "acorn": "^6.4.1",
     "bourbon": "^6.0.0",
     "compass-mixins": "^0.12.10",
+    "consola": "^3.2.3",
+    "cross-env": "^7.0.3",
     "dot-prop": "^4.2.1",
+    "express": "^4.18.2",
     "kind-of": "^6.0.3",
     "minimist": "^1.2.6",
     "moment": "^2.29.4",
+    "nodemon": "^3.0.1",
     "nuxt": "^2.0.0",
     "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
