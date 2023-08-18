@@ -1,5 +1,6 @@
-export default {
+module.exports = {
   ssr: false,
+  telemetry: false,
   /*
   ** Headers of the page
   */
@@ -49,6 +50,9 @@ export default {
   modules: [
     '@nuxtjs/axios'
   ],
+  axios: {
+    proxy: true
+  },
   /*
   ** Build configuration
   */
