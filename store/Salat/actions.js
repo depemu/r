@@ -1,7 +1,7 @@
 export default {
   getPrayTimes ({ commit }) {
     return new Promise ((resolve, reject) => {
-      this.$axios.$get('//api.muh.my.id/v1/salat/').then((response) => {
+      this.$axios.$get('//api.muhar.cloud/v1/salat/').then((response) => {
         if (!response.error) {
           const items = response.items
           const r = items.times
