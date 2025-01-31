@@ -1,9 +1,9 @@
 export default {
   getPrayTimes ({ commit }) {
     return new Promise ((resolve, reject) => {
-      this.$axios.$get('//api.merasaneptunus.my.id/v1/salat/').then((response) => {
-        if (!response.error) {
-          const items = response.items
+      this.$axios.$get('https://papi.muhar.us/?app=salat').then((response) => {
+        if (response.success) {
+          const items = response.result
           const r = items.times
           const times = {
             subuh: r.Fajr,
